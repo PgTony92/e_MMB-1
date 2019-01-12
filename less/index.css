@@ -1,0 +1,381 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+/* 慢慢买的主题色 */
+/* MUI 初始化里面没有这个图片对齐方式的 初始化样式 再单独加 */
+img {
+  vertical-align: middle;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #666;
+}
+input {
+  font-size: .14rem;
+}
+/* 清除a标签默认伪类样式 */
+a:active {
+  color: #666;
+}
+body {
+  font-size: 0.16rem;
+  padding: 0.5rem 0;
+}
+#header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  height: 0.5rem;
+  background: #ff4e49;
+  border-bottom: 0.01rem solid #e6e6e6;
+  z-index: 999;
+  text-align: center;
+  color: #fff;
+}
+#header .left {
+  position: absolute;
+  width: 0.5rem;
+  left: 0;
+  color: #fff;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#header .header-text {
+  line-height: 0.5rem;
+}
+#header .right {
+  position: absolute;
+  width: 0.5rem;
+  right: 0;
+  top: .25rem;
+  transform: translateY(-50%);
+}
+#header .right a {
+  width: 100%;
+  display: block;
+}
+#header .right a img {
+  width: 50%;
+}
+#footer {
+  position: fixed;
+  height: .8rem;
+  width: 100%;
+  bottom: 0;
+  background-color: #232a34;
+}
+#footer .foot_top {
+  border-bottom: 0.01rem solid #727272;
+  height: 0.34rem;
+  line-height: 0.34rem;
+  clear: both;
+  text-align: center;
+}
+#footer .foot_top a {
+  box-sizing: border-box;
+  float: left;
+  font-size: 0.14rem;
+  border-right: 0.01rem solid #727272;
+  text-align: center;
+  width: 30%;
+  color: #fff;
+  display: inline-block;
+}
+#footer .foot_top i {
+  padding-right: 0.05rem;
+}
+#footer .footer-proud {
+  font-size: 0.12rem;
+  padding: 0.04rem 0;
+  color: #666;
+  text-align: center;
+}
+#footer .footer-proud p {
+  font-size: .12rem;
+  margin-bottom: 0;
+}
+/* 中间部分的主体样式 */
+#main {
+  /* 会在main里面添加一个区域滚动容器 MUI自带了绝对定位 可以main设置相对定位 让 mui-scroll-wrapper相对main去定位 */
+  position: relative;
+  /* 同时需要给main设置高度100% 让main在中间范围显示 继承body内容的高度 */
+  height: 100%;
+}
+/* 搜索表单的公共样式 */
+#search-bar {
+  width: 100%;
+  position: fixed;
+  top: 0.42rem;
+  padding: 0.1rem;
+  background-color: #fff;
+  z-index: 999;
+}
+#search-bar .search {
+  display: flex;
+  position: relative;
+  padding-right: 0.7rem;
+}
+#search-bar .search > input[type=search] {
+  flex: 1;
+  background: #f1f1f1;
+  font-size: 0.13rem;
+  padding-right: 0.5rem;
+  padding-left: 0.2rem;
+  border-radius: 0.15rem;
+}
+#search-bar .search > input[type=button] {
+  position: absolute;
+  width: 0.63rem;
+  background: #565656;
+  color: #fff;
+  top: 0;
+  right: 0;
+  font-size: 0.16rem;
+  border-radius: 0.15rem;
+}
+/* 遮罩层的公共样式 */
+#mask {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 998;
+  background-color: #ccc;
+  display: block;
+}
+#mask canvas {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+/* a的颜色 */
+/* 边框颜色 */
+* {
+  margin: 0rem;
+  padding: 0rem;
+}
+html {
+  font-size: 100px;
+}
+body {
+  font-size: 0.16rem;
+  padding-top: 1rem;
+  width: 100vw;
+}
+img {
+  vertical-align: middle;
+}
+a {
+  color: #666;
+}
+#header .left a {
+  display: block;
+  width: 2rem;
+  padding-left: .1rem;
+}
+#header .left a img {
+  width: 100%;
+  vertical-align: middle;
+}
+#search-bar {
+  padding-bottom: 0;
+}
+#main {
+  /* 菜单栏区域 */
+  /* 折扣推荐区域 */
+  /* 更多优惠信息 */
+}
+#main .menu {
+  padding-top: .2rem;
+  background-color: #fff;
+  margin-top: .08rem;
+  box-shadow: 0px 0px 1px 0px #ccc;
+}
+#main .menu ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+#main .menu ul li {
+  width: 25%;
+  margin-bottom: .1rem;
+}
+#main .menu ul li.travel {
+  text-align: center;
+}
+#main .menu ul li a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#main .menu ul li a p {
+  color: #000;
+}
+#main .menu img {
+  width: .35rem;
+  margin-bottom: .05rem;
+}
+#main .list-title {
+  background-color: #ff9914;
+  border-bottom: 0.01rem solid #ffc881;
+  line-height: 0.35rem;
+  overflow: hidden;
+  color: #fff;
+  padding-left: 0.1rem;
+  font-weight: 700;
+  font-size: 0.18rem;
+  clear: both;
+}
+#main .list-title .more-right {
+  float: right;
+  margin-right: 0.1rem;
+  color: #fff;
+  margin-top: 0.08rem;
+  font-size: 1.2em;
+}
+#main .list-nav {
+  background-color: #ff4e49;
+  border-bottom: 0.01rem solid #ffc881;
+  line-height: 0.2rem;
+  overflow: hidden;
+  color: #000;
+  padding-left: 0.1rem;
+  font-size: 0.12rem;
+  clear: both;
+  text-align: center;
+}
+#main .list-nav .more-right {
+  float: right;
+  margin-right: 0.1rem;
+  margin-top: 0.03rem;
+  font-size: 1.2em;
+  color: #000;
+}
+#main .list-nav .list-nav-mid {
+  margin: 0 .75rem;
+}
+#main .title-bottom {
+  margin-bottom: .3rem;
+}
+#main .special-offers {
+  margin-top: .1rem;
+  margin-bottom: .1rem;
+}
+#main .special-offers a {
+  display: block;
+  background: #F4F4F4;
+  font-size: .13rem;
+  text-align: center;
+  width: 3.55rem;
+  height: .32rem;
+  margin: 0 auto;
+  line-height: .32rem;
+  background-image: linear-gradient(#ffffff, #f4f4f4);
+  border-radius: .04rem;
+  box-shadow: 0px 0px 1px 0px #ccc;
+}
+#main .brandRanking {
+  margin-top: .05rem;
+}
+#main .brandRanking .nav {
+  background-color: #f6f6f6;
+  position: relative;
+}
+#main .brandRanking .nav img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: block;
+  width: auto;
+  max-height: 100%;
+  text-align: center;
+  margin: 0 auto;
+}
+.productList {
+  background-color: #fff;
+  box-shadow: 0px 0px 1px 0px #ccc;
+  display: flex;
+}
+.productList div {
+  display: flex;
+}
+.productList div a {
+  padding-top: .1rem;
+  width: 100px;
+  height: 100px;
+}
+.productList div .img {
+  width: 1rem;
+  height: 1rem;
+}
+.productList div .litre {
+  color: #333;
+}
+.productList div .litre .price {
+  color: #ff6c00;
+}
+.productList div .productRight {
+  padding-top: .1rem;
+  padding-right: .1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.productList div .productRight .title {
+  color: #333;
+}
+.productList div .productRight p.productInfo {
+  margin-top: .2rem;
+  font-size: .12rem;
+  position: relative;
+}
+.productList div .productRight p.productInfo .comment {
+  position: absolute;
+  right: 0;
+}
+.productList div img {
+  width: 1rem;
+  vertical-align: middle;
+}
+.productList-toggle {
+  width: 50%;
+}
+.productList-toggle > div a {
+  display: block;
+}
+.productList-toggle > div a img {
+  width: 100%;
+}
+.productList-toggle > div .productRight {
+  background-color: #fff;
+  padding-top: .1rem;
+  padding-right: .1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.productList-toggle > div .productRight .litre {
+  color: #333;
+}
+.productList-toggle > div .productRight .litre .price {
+  color: #ff6c00;
+}
+.productList-toggle > div .productRight .title {
+  color: #333;
+}
+.productList-toggle > div .productRight p.productInfo {
+  margin-top: .01rem;
+  font-size: .12rem;
+  position: relative;
+}
+.productList-toggle > div .productRight p.productInfo .comment {
+  position: absolute;
+  right: 0;
+}

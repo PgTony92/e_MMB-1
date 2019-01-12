@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>主页</title>
+    <link rel="stylesheet" type="text/css" href="lib/mui/css/mui.min.css">
+    <link rel="stylesheet" type="text/css" href="lib/fontAwesome/css/font-awesome.css">
+    <link rel="stylesheet/less" href="less/productSave.less">
+    <script src="lib/less/less.js"></script>
+    <script src="./js/rem.js"></script>
+    <script src="js/base.js"></script>
+</head>
+
+<body>
+    <!-- 头部 -->
+    <header id="header">
+        <div class="left">
+            <a href="#" title="" class="left fa fa-arrow-left return">
+            </a>
+        </div>
+        <!-- <div class="icon-back"><a href="index.html">&lt;</a> -->
+        <div class="header-text"><span>国内折扣</span></div>
+        <div class="right">
+            <a href="#" title="" class="download">
+                <img src="images/header_app.png" alt="手机app下载">
+            </a>
+        </div>
+    </header>
+    <!-- 中间 -->
+    <main id="main">
+        <h3 class="title">移动端凑单品：海天 鲜味 生抽 1.28L</h3>
+        <p class="bx">
+            <span class="ly">京东商城</span>
+            <span class="time"></span>
+            <span class="xb"></span>
+        </p>
+        <div class="bx-content">
+            <div class="bx-text">
+                <!-- <img src="./images/ic_cu.png" alt=""> -->
+                <p>海天的金标生抽酱油，采用了非转基因大豆以及小麦发酵而成，而自然鲜的口感是有些鲜甜鲜甜的感觉，非常适合用来作为日常炒菜用的调味料，当然也能用作白切系列的蘸酱调料，相信吃过美味鲜的慢友们都了解的.</p>
+            </div>
+            <p> 目前京东商城移动端售价10.9元，不错的凑单品，刚需可入，规格1.28L。 </p>
+            <!-- <img src="./images/ic_cu.png" alt=""> -->
+        </div>
+        <div class="addre">
+            <ul class="mui-table-view">
+                <li class="mui-table-view-cell">北京
+                    <span class="youhuo">有货</span>
+                </li>
+            </ul>
+        </div>
+        <div class="erweima">
+            <!-- <img src="./images/mmbweixin2.png" alt=""> -->
+        </div>
+        <div class="comment">
+
+        </div>
+    </main>
+    <!-- 脚部 -->
+    <footer id="footer">
+        <div class="foot_top"><a href="login.html">登录</a> <a href="register.html">注册</a> <a href="##" style="width: 40%; border: 0;"
+                id="rtt"><i class="fa fa-arrow-up"></i>返回顶部</a></div>
+        <div class="footer-proud">
+            <p><a href="##" style="color: #ff4e49">手机APP下载</a> <a href="index.htm" tppabs="##" style="color:#bebebe;">慢慢买手机版
+                    -- 掌上比价平台</a></p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+    <div id="mask"></div>
+    <!-- 模版 -->
+    <script id="productSaveTpl" type="text/html">
+        <h3 class="title">{{result[0].productName}}</h3>
+        <p class="bx">
+            <span class="ly">{{result[0].productFrom}}</span>
+            <span class="time">{{result[0].productTime}}</span>
+            <span class="xb">{{result[0].productTips}}</span>
+        </p>
+       <div class="bx-content">
+                <div class="bx-text">
+                        {{@result[0].productImgSm}}
+                    <p>{{result[0].productInfo2}}</p>
+                </div>
+                <!-- <p> {{result[0].productInfo1}}</p> -->
+                {{@result[0].productImgLg}}
+       </div>
+       <div class="addre">
+            <!-- <ul class="mui-table-view">
+                    <li class="mui-table-view-cell">北京 
+                        <span class="youhuo">有货</span>
+                    </li>
+                </ul> -->
+                {{@result[0].productCity}}
+       </div>
+       <div class="erweima">
+           <img src="./images/code.png" alt="">
+       </div>
+       <div class="comment">
+            {{@result[0].productComment}}
+       </div>
+    </script>
+</body>
+<script src="lib/mui/js/mui.min.js"></script>
+<script src="lib/zepto/zepto.min.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
+<script src="js/productSave.js"></script>
+<script src="js/loading.js"></script>
+
+</html>

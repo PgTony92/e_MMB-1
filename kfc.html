@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css">
+    <link rel="stylesheet/less" href="./less/kfc.less">
+    <script src="./lib/less/less.js"></script>
+    <script src="./js/rem.js"></script>
+    <script src="js/base.js"></script>
+    <title>KFC</title>
+</head>
+
+<body>
+    <header id="header">
+        <div class="left">
+            <a href="coupon.html" title="" class="left fa fa-arrow-left">
+            </a>
+        </div>
+        <!-- <div class="icon-back"><a href="index.html">&lt;</a> -->
+        <div class="header-text"><span>肯德基优惠卷</span></div>
+
+        <div class="right">
+            <a href="#" title="" class="download">
+                <img src="images/header_app.png" alt="手机app下载">
+            </a>
+        </div>
+    </header>
+
+    <main id="main">
+        <p> --点餐前出示手机中的优惠券,即可享受优惠--</p>
+        <div class="coupon">
+            <ul class="bb">
+                <li class="box">
+                    <a href="javascript:void(0)">
+                        <div class="left">
+                            <img src="http://d3.5ikfc.com/static/thumbs/1016/kfc-5ikfc-108_pc27.jpg" alt="">
+                        </div>
+                        <div class="right">
+                            <div class="top">
+                                <h3>C27 两人小食组 新奥尔良烤翅2块+薯条(中)+黄金鸡块5块+劲爆鸡米花(小) 2016年10月凭肯德基优惠券</h3>
+                                <p>￥ 28</p>
+                            </div>
+                            <div class="bottom">
+                                <span> 有效期至10月31日 </span>
+                                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="shouye">
+            <a href="index.html">首页</a>&nbsp;&nbsp;&gt;&nbsp;&nbsp;<a href="javascript:void(0)">优惠卷</a>&nbsp;&nbsp;&gt;&nbsp;&nbsp;<a href="javascript:void(0)">肯德基优惠卷</a>
+        </div>
+        <!-- 遮罩层 -->
+        <div class="zhezhaoceng">
+            <div class="del">
+                X
+            </div>
+        </div>
+        <section id="slide">
+            <div class="mui-slider">
+                <div class="mui-slider-group mui-slider-loop">
+                    <!--支持循环，需要重复图片节点-->
+                    <!-- <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="http://d3.5ikfc.com/static/thumbs/1016/kfc-5ikfc-108_pc35.jpg" /></a></div> -->
+                    <div class="mui-slider-item  aaa"><a href="javascript:void(0)"><img src="http://d3.5ikfc.com/static/thumbs/1016/kfc-5ikfc-108_pc27.jpg" /></a></div>
+                    <div class="mui-slider-item"><a href="javascript:void(0)"><img src="http://d3.5ikfc.com/static/thumbs/1016/kfc-5ikfc-108_pc28.jpg" /></a></div>
+                    <div class="mui-slider-item"><a href="javascript:void(0)"><img src="http://d3.5ikfc.com/static/thumbs/1016/kfc-5ikfc-108_pc15.jpg" /></a></div>
+                    <div class="mui-slider-item"><a href="javascript:void(0)"><img src="http://d3.5ikfc.com/static/thumbs/1016/kfc-5ikfc-108_pc22.jpg" /></a></div>
+                    <div class="mui-slider-item"><a href="javascript:void(0)"><img src="http://d3.5ikfc.com/static/thumbs/1016/kfc-5ikfc-108_pc14.jpg" /></a></div>
+                    <!--支持循环，需要重复图片节点-->
+                    <!-- <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="http://d3.5ikfc.com/static/thumbs/1016/kfc-5ikfc-108_pc21.jpg" /></a></div> -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div class="foot_top"><a href="login.html">登录</a> <a href="register.html">注册</a> <a href="#" style="width: 40%; border: 0;"
+            id="rtt"><i class="fa fa-arrow-up"></i>返回顶部</a></div>
+        <div class="footer-proud">
+            <p><a href="#" style="color: #ff4e49">手机APP下载</a> <a href="index.html" tppabs="##" style="color:#bebebe;">慢慢买手机版
+                    -- 掌上比价平台</a></p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+    <div id="mask"></div>
+</body>
+
+</html>
+<script src="./lib/mui/js/mui.js"></script>
+<script src="./lib/zepto/zepto.min.js"></script>
+<script src="./js/kfc.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="js/loading.js"></script>
+<script type="text/html" id="tpl">
+  
+    {{each result value}}
+    <li class="box">
+        <a href="javascript:void(0)">
+            <div class="left">
+                {{@value.couponProductImg}}
+            </div>
+            <div class="right">
+                <div class="top">
+                    <h3>{{value.couponProductName}}</h3>
+                    <p>{{value.couponProductPrice}}</p>
+                </div>
+                <div class="bottom">
+                    <span> {{value.couponProductTime}} </span>
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </div>
+            </div>
+        </a>
+    </li>
+    {{/each}}
+
+</script>
+<script type="text/html" id="slideTpl">
+    {{ each result value }}
+        <div class="swiper-slide">
+            {{@value.couponProductImg}}
+        </div>
+    {{ /each }}
+</script>

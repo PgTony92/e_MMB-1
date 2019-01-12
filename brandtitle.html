@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>品牌分类大全</title>
+    <!-- 引入mui的css文件 -->
+    <link rel="stylesheet" href="lib/mui/css/mui.min.css">
+    <!-- 引入字体图标文件 -->
+    <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.min.css">
+    <!-- 引入自己的less文件 -->
+    <link rel="stylesheet/less" href="less/brandtitle.less">
+    <!-- 引入less编译文件 -->
+    <script src="lib/less/less.js"></script>
+    <!-- 引入rem文件 -->
+    <script src="js/rem.js"></script>
+
+
+</head>
+
+<body>
+    <!-- 头部区域 -->
+    <header id="header">
+        <div class="left">
+            <a href="index.html">
+                <img src="images/header_logo.png" alt="">
+            </a>
+        </div>
+
+        <div class="right">
+            <a href="#" class="download">
+                <img src="images/header_app.png" alt="手机app下载">
+            </a>
+        </div>
+    </header>
+
+    <!-- 搜索框 -->
+    <section id="search">
+        <div class="left">
+            <input type="text" placeholder="请输入你想比价的商品">
+        </div>
+        <div class="right">
+            <a href="#">搜索</a>
+        </div>
+    </section>
+
+    <!-- 分类标签 -->
+    <section id="categoryBar">
+        <a href="#">首页</a> > <a href="#">全部分类 ></a>
+    </section>
+
+    <!-- 主体区域 -->
+    <main id="main">
+        <div class="tlt">
+            热门品牌排行
+        </div>
+        <div class="content">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span>电视</span>
+                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </a>
+                    <ul class="mui-table-view Tv">
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="bx">
+                        <span>空调</span>
+                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </a>
+                    <ul class="mui-table-view air">
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="bx">
+                        <span>影音</span>
+                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </a>
+                    <ul class="mui-table-view video">
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="bx">
+                        <span>冰箱</span>
+                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </a>
+                    <ul class="mui-table-view refrigerator">
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="bx">
+                        <span>厨卫</span>
+                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </a>
+                    <ul class="mui-table-view kitchen">
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="bx">
+                        <span>手机</span>
+                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </a>
+                    <ul class="mui-table-view mobile">
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="bx">
+                        <span>相机</span>
+                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </a>
+                    <ul class="mui-table-view camera">
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </main>
+
+
+    <!-- 尾部区域 -->
+    <footer id="footer">
+        <div class="foot_top"><a href="login.html">登录</a> <a href="register.html">注册</a> <a href="##" style="width: 40%; border: 0;"
+                id="rtt"><i class="fa fa-arrow-up"></i>返回顶部</a></div>
+        <div class="footer-proud">
+            <p><a href="#" style="color: #ff4e49">手机APP下载</a> <a href="index.htm" tppabs="##" style="color:#bebebe;">慢慢买手机版
+                    -- 掌上比价平台</a></p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+    <div id="mask"></div>
+
+    <!-- 创建模板 -->
+
+    <!-- 电视模板 -->
+    <script id="tvTpl" type="text/html">
+        {{each result value index}}
+        {{if index < 7}}
+        <li class="mui-table-view-cell" data-id="{{value.brandTitleId}}"><a href="#">{{value.brandTitle}}</a></li>
+        {{/if}}
+        {{/each}}
+    </script>
+
+    <!-- 空调模板 -->
+    <script id="airTpl" type="text/html">
+        {{each result value index}}
+        {{if index > 7 && index < 16 }}
+        <li class="mui-table-view-cell"><a href="#" data-id="value.brandTitleId">{{value.brandTitle}}</a></li>
+        {{/if}}
+        {{/each}}
+    </script>
+
+    <!-- 影音模板 -->
+    <script id="videoTpl" type="text/html">
+        {{each result value index}}
+        {{if index == 16 || index == 23 || index == 22 }}
+        <li class="mui-table-view-cell"><a href="#" data-id="value.brandTitleId">{{value.brandTitle}}</a></li>
+        {{/if}}
+        {{/each}}
+    </script>
+
+    <!-- 冰箱模板 -->
+    <script id="refrigeratorTpl" type="text/html">
+        {{each result value index}}
+        {{if index > 16 && index < 22 }}
+        <li class="mui-table-view-cell"><a href="#" data-id="value.brandTitleId">{{value.brandTitle}}</a></li>
+        {{/if}}
+        {{/each}}
+    </script>
+
+    <!-- 厨卫模板 -->
+    <script id="kitchenTpl" type="text/html">
+        {{each result value index}}
+        {{if index > 24 && index < 43 }}
+        <li class="mui-table-view-cell"><a href="#" data-id="value.brandTitleId">{{value.brandTitle}}</a></li>
+        {{/if}}
+        {{/each}}
+    </script>
+
+    <!-- 手机模板 -->
+    <script id="mobileTpl" type="text/html">
+        {{each result value index}}
+        {{if index >= 43 && index < 49 }}
+        <li class="mui-table-view-cell"><a href="#" data-id="value.brandTitleId">{{value.brandTitle}}</a></li>
+        {{/if}}
+        {{/each}}
+    </script>
+
+    <!-- 相机模板 -->
+    <script id="cameraTpl" type="text/html">
+        {{each result value index}}
+        {{if index >= 49 }}
+        <li class="mui-table-view-cell"><a href="#" data-id="value.brandTitleId">{{value.brandTitle}}</a></li>
+        {{/if}}
+        {{/each}}
+    </script>
+
+
+
+
+
+
+    <!-- 引入mui的js文件 -->
+    <script src="lib/mui/js/mui.min.js"></script>
+    <!-- 引入jquery文件 -->
+    <script src="lib/jquery/jquery-3.1.1.min.js"></script>
+    <!-- 引入移动端的zepto文件 -->
+    <script src="lib/zepto/zepto.min.js"></script>
+    <!-- 引入公共的js文件 -->
+    <script src="js/base.js"></script>
+    <!-- 引入模板文件 -->
+    <script src="lib/artTemplate/template-web.js"></script>
+    <!-- 引入自己的js文件 -->
+    <script src="js/brandtitle.js"></script>
+    <script src="js/loading.js"></script>
+
+
+</body>
+
+</html>

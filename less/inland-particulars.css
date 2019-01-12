@@ -1,0 +1,207 @@
+/* 乐淘的主题色 */
+/* MUI 初始化里面没有这个图片对齐方式的 初始化样式 再单独加 */
+img {
+  vertical-align: middle;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+li {
+  list-style: none;
+}
+a {
+  color: #666;
+}
+body {
+  background-color: #fff;
+  margin: 0px auto;
+  /* 把 MUI默认字体17变成 14px */
+  font-size: .14rem;
+  /* 如果觉得文字有点偏上 行高继承body的默认21px行高 所有有点偏 行高也变成14px */
+  line-height: .14rem;
+}
+/* 给body设置padding 让 main被挤到中间来 */
+body {
+  position: relative;
+  /* 给body设置高度 100vh */
+  height: 100vh;
+}
+#header {
+  background-color: #ff4e49;
+  height: .5rem;
+  display: flex;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  margin: 0;
+  z-index: 999;
+}
+#header .left {
+  width: .5rem;
+  height: .5rem;
+  text-align: center;
+  line-height: .5rem;
+  color: aliceblue;
+}
+#header .centent {
+  flex: 1;
+  text-align: center;
+  line-height: .5rem;
+  margin: 0;
+  color: aliceblue;
+  font-size: .20rem;
+}
+#header .right {
+  display: block;
+}
+#header .right img {
+  width: .32rem;
+  height: .3rem;
+  margin: .1rem .1rem 0 0;
+}
+#main {
+  background: #fff;
+  padding: 0 .1rem;
+  overflow: hidden;
+  margin-top: .5rem;
+}
+#main .content {
+  padding: 0 .15rem;
+}
+#main .content h3 {
+  font-size: .18rem;
+  padding: 10px 0;
+}
+#main .content h5 {
+  color: #ff6c00;
+  font-size: 15px;
+  font-weight: bold;
+}
+#main .content .info {
+  color: #999;
+  line-height: .3rem;
+}
+#main .content .xiangqing {
+  padding-bottom: 20px;
+}
+#main .content .xiangqing p {
+  font-size: 16px;
+  line-height: 24px;
+  color: black;
+}
+#main .content .xiangqing img {
+  float: right;
+  width: 1.2rem;
+  height: 1.2rem;
+}
+#main .content .price {
+  padding-bottom: .18rem;
+  text-align: center;
+}
+#main .content .price img {
+  display: block;
+  width: 2.2rem;
+  height: 2.2rem;
+}
+#main .content .btn {
+  margin: 20px 0px;
+}
+#main .content .btn a {
+  display: block;
+  height: .3rem;
+  color: #fff;
+  border-radius: .05rem;
+  background: #ff9000;
+  text-align: center;
+  line-height: .3rem;
+  font-size: .16rem;
+}
+#main .content .code {
+  margin: .3rem 0  .3rem  0;
+}
+#main .content .code img {
+  width: 100%;
+}
+#main .content .pinglun textarea {
+  margin: 0;
+}
+#main .content .pinglun .fabiao {
+  position: relative;
+  height: .33rem;
+}
+#main .content .pinglun .fabiao button {
+  position: absolute;
+  right: 0;
+}
+#main .content .ui-border-b {
+  margin-bottom: .1rem;
+}
+#main .content .new .userimg {
+  position: relative;
+  display: inline-block;
+  line-height: .16rem;
+}
+#main .content .new .userimg img {
+  width: 40px;
+  border-radius: 50%;
+  margin-top: .25rem;
+  margin-right: .05rem;
+}
+#main .content .new .userimg span {
+  margin-bottom: .1rem;
+}
+#main .content .new .userimg p {
+  position: absolute;
+  margin-left: .5rem;
+  color: black;
+  top: 0.5rem;
+}
+#footer {
+  margin-top: .3rem;
+  width: 100%;
+}
+#footer .mui-row .mui-col-xs-4 {
+  text-align: center;
+  background-color: #232a34;
+  line-height: .34rem;
+  border-right: .01rem solid #727272;
+}
+#footer .mui-row .mui-col-xs-4 .right {
+  width: 50%;
+}
+#footer .mui-row .mui-col-xs-4 a {
+  color: #eeeeee;
+}
+#footer .footer-proud {
+  height: 62px;
+  text-align: center;
+  background-color: #232a34;
+  padding: .15rem;
+  border-top: .01rem solid #727272;
+}
+#footer .footer-proud p {
+  font-size: .12rem;
+  margin: 0;
+  line-height: .16rem;
+}
+#footer .footer-proud .wangzhi {
+  color: #666666;
+}
+/* 遮罩层的公共样式 */
+#mask {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 998;
+  background-color: #fff;
+  display: block;
+}
+#mask canvas {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}

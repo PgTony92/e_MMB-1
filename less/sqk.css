@@ -1,0 +1,119 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-size: 0.16rem;
+}
+li {
+  list-style: none;
+}
+#header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  height: 0.5rem;
+  background: #ff4e49;
+  border-bottom: 0.01rem solid #e6e6e6;
+  z-index: 999;
+  text-align: center;
+  color: #fff;
+}
+#header .left {
+  position: absolute;
+  width: 0.5rem;
+  left: 0;
+  color: #fff;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#header .header-text {
+  line-height: 0.5rem;
+}
+#header .right {
+  position: absolute;
+  width: 0.5rem;
+  right: 0;
+  top: .25rem;
+  transform: translateY(-50%);
+}
+#header .right a {
+  width: 100%;
+  display: block;
+}
+#header .right a img {
+  width: 50%;
+}
+#footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  background-color: #232a34;
+}
+#footer .foot_top {
+  border-bottom: 0.01rem solid #727272;
+  height: 0.34rem;
+  line-height: 0.34rem;
+  clear: both;
+  text-align: center;
+}
+#footer .foot_top a {
+  box-sizing: border-box;
+  float: left;
+  font-size: 0.14rem;
+  border-right: 0.01rem solid #727272;
+  text-align: center;
+  width: 30%;
+  color: #fff;
+  display: inline-block;
+}
+#footer .foot_top i {
+  padding-right: 0.05rem;
+}
+#footer .footer-proud {
+  font-size: 0.12rem;
+  line-height: .18rem;
+  padding: 0.15rem 0;
+  color: #666;
+  text-align: center;
+}
+#footer .footer-proud p {
+  font-size: .12rem;
+  margin-bottom: 0;
+}
+#main {
+  padding: .5rem .05rem 1.3rem .05rem;
+  background-color: #fff;
+}
+#main .main-content a {
+  display: block;
+  height: 1rem;
+  overflow: hidden;
+}
+#main .main-content a .mui-row {
+  padding: .05rem 0 0 0;
+}
+#main .main-content a .mui-row .tu img {
+  width: .85rem;
+  height: .85rem;
+}
+#main .main-content a .mui-row .xq p .price {
+  color: orange;
+}
+#main .main-content a .mui-row .xq p:nth-child(2) {
+  margin-bottom: 0;
+  font-size: .12rem;
+}
+#main .main-content a .mui-row .xq p:nth-child(2) .pinglun {
+  font-size: .14rem;
+  float: right;
+}
+#yema {
+  position: fixed;
+  bottom: .99rem;
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+  background-color: #fff;
+  padding: .05rem 0;
+}

@@ -1,0 +1,200 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  color: #000;
+  font-size: .14rem;
+}
+body {
+  font-size: 0.16rem;
+  padding-top: 0.9rem;
+  position: relative;
+}
+#header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  height: 0.5rem;
+  background: #ff4e49;
+  border-bottom: 0.01rem solid #e6e6e6;
+  z-index: 999;
+  text-align: center;
+  color: #fff;
+}
+#header .left {
+  position: absolute;
+  width: 0.5rem;
+  left: 0;
+  color: #fff;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#header .header-text {
+  line-height: 0.5rem;
+}
+#header .right {
+  position: absolute;
+  width: 0.5rem;
+  right: 0;
+  top: .25rem;
+  transform: translateY(-50%);
+}
+#header .right a {
+  width: 100%;
+  display: block;
+}
+#header .right a img {
+  width: 50%;
+}
+#product-nav {
+  width: 100%;
+  padding: 0 .2rem;
+  height: .4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ddd;
+  border-bottom: 1px solid #ccc;
+  background: linear-gradient(to bottom, #fff, #ddd);
+  box-sizing: border-box;
+  position: fixed;
+  top: .5rem;
+  z-index: 999;
+}
+#product-nav .left ul {
+  text-align: center;
+  height: 100%;
+}
+#product-nav .left ul li {
+  list-style: none;
+  float: left;
+  line-height: .4rem;
+}
+#product-nav .left ul li i {
+  margin: .05rem;
+}
+#product-nav .right button {
+  color: #333;
+  padding: 0.02rem;
+}
+#footer {
+  position: absolute;
+  height: .8rem;
+  width: 100%;
+  bottom: -1rem;
+  background-color: #000;
+}
+#footer .foot_top {
+  border-bottom: 0.01rem solid #727272;
+  height: 0.34rem;
+  line-height: 0.34rem;
+  clear: both;
+  text-align: center;
+}
+#footer .foot_top a {
+  box-sizing: border-box;
+  float: left;
+  font-size: 0.14rem;
+  border-right: 0.01rem solid #727272;
+  text-align: center;
+  width: 30%;
+  color: #fff;
+  display: inline-block;
+}
+#footer .foot_top i {
+  padding-right: 0.05rem;
+}
+#footer .footer-proud {
+  font-size: 0.12rem;
+  padding: 0.04rem 0;
+  color: #666;
+  text-align: center;
+}
+#footer .footer-proud p {
+  font-size: .12rem;
+  margin-bottom: 0;
+}
+body {
+  background-color: #fff;
+}
+#main .mui-card {
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
+}
+#main .mui-card .mui-card-content {
+  text-align: center;
+  position: relative;
+  margin-bottom: .2rem;
+}
+#main .mui-card .mui-card-content p {
+  text-align: left;
+  padding: .2rem .1rem 0 .1rem;
+  color: #000;
+}
+#main .mui-card .mui-card-content .little-img {
+  position: absolute;
+  width: .5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  bottom: 0;
+}
+#main .mui-card .footer-top {
+  min-height: .3rem;
+  height: .3rem;
+  padding: 0;
+  text-align: center;
+}
+#main .mui-card .footer-top a {
+  display: inline-block;
+  width: 33.33%;
+  height: 100%;
+  line-height: .3rem;
+  border-top: #c14d00 solid .5px;
+  border-left: #c14d00 solid .5px;
+  background-color: #ffc627;
+}
+#main .mui-card .footer-top a:nth-child(1) {
+  background-color: #ffa025;
+  border-left: 0 none;
+}
+#main .mui-card p {
+  padding: 0 .1rem;
+  margin: 0;
+  border-top: #aaa 1px solid;
+  border-bottom: #aaa 3px solid;
+  font-size: .12rem;
+}
+#main .appraise {
+  margin-top: 3px;
+}
+#main .appraise .title {
+  height: .4rem;
+  text-align: center;
+  line-height: .4rem;
+  background-color: #cccccc;
+}
+#main .appraise .mui-card {
+  padding: 0;
+  box-shadow: none;
+  border-bottom: #aaa 1px solid;
+}
+#main .appraise .mui-card .mui-card-header {
+  min-height: .2rem;
+  padding: 0 .1rem;
+}
+#main .appraise .mui-card .mui-card-header:after {
+  height: 0;
+}
+#main .appraise .mui-card .mui-card-header span {
+  font-size: .12rem;
+}
+#main .appraise .mui-card .mui-card-content p {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}

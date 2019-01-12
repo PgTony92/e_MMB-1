@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 1. 添加视口 -->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <title>国内折扣</title>
+    <!-- 1. CSS在head中引入  Link
+    2. JS在body结束标签上面引入  script
+    3. 先引入第三方包(方便我们自己使用和覆盖)
+    4. 再引入自己的包
+    5. 如果有依赖关系 先引入被依赖的包 在引入不被依赖的包 -->
+    <!-- 引入MUI的CSS文件 -->
+    <link rel="stylesheet" href="lib/mui/css/mui.css">
+    <link rel="icon" href="images/favicon.ico">
+    <!-- 引入字体图标fontawsome字体图标库的CSS文件 -->
+    <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.css">
+    <!-- 引入主页的less文件 注意 stylesheet/less-->
+    <link rel="stylesheet/less" href="less/inland-discount.less">
+    <!-- 引入less.js的编译器文件 编译less代码 要编译index.less 依赖index.less  影响页面渲染优先执行 -->
+    <script src="lib/less/less.js"></script>
+    <!-- 引入rem.js屏幕适配的JS代码 -->
+    <script src="js/rem.js"></script>
+</head>
+
+<body>
+    <!-- 头部区域 -->
+    <header id="header">
+        <a href="index.html" class="left fa fa-arrow-left"></a>
+        <h4 class="centent">
+            国内折扣
+        </h4>
+
+        <a href="#" class="right">
+            <img src="/images/header_app.png" alt="">
+        </a>
+    </header>
+    <!-- 主体部分 -->
+    <div class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+    <section id="main">
+        <div class="mui-row">
+                    <div class="mui-col-xs-6">
+                        <a href="inland-particulars.html">
+                            <img src="/images/大枣.jpg">
+                            <p class="title">西域美农新疆特产五星和田红枣250g*2</p>
+                            <p class="rmb">19.8元(5件99元)</p>
+                            <p class="time">京东商城 | 10-22 13:28</p>
+                        </a>
+                    </div>
+                </div>
+    </section>
+    <footer id="footer">
+        <div class="mui-row">
+            <div class="mui-col-xs-4">
+                <a href="login.html">登录</a>
+            </div>
+            <div class="mui-col-xs-4">
+                <a href="register.html">注册</a>
+            </div>
+            <div class="mui-col-xs-4 right">
+                <a href="inland-discount.html" class="fa fa-arrow-up">返回顶部</a>
+            </div>
+        </div>
+        <div class="footer-proud">
+            <p><a href="#" style="color: #ff4e49">手机APP下载</a> <a href="index.htm" tppabs="##" style="color:#bebebe;">慢慢买手机版
+                    -- 掌上比价平台</a></p>
+            <p class="wangzhi">m.manmanbuy.com</p>
+        </div>
+    </footer>
+    <div id="mask"></div>
+</div>
+</div>
+
+    <script id="lalalTpl" type="text/html">
+        {{each result value index}}
+        <div class="mui-col-xs-6">
+            <a href="inland-particulars.html?id={{value.productId}}">
+                  {{@value.productImg}}    
+                <p class="title">{{value.productName}}</p>
+                <p class="rmb">{{value.productPrice}}</p>
+                <p class="time">{{value.productFrom}} | {{value.productTime}}</p>
+            </a>
+        </div>
+        {{/each}}
+    </script>
+    <script src="./lib/mui/js/mui.js"></script>
+    <script src="lib/zepto/zepto.min.js"></script>
+    <script src="lib/artTemplate/template-web.js"></script>
+    <script src="js/inland-discount.js"></script>
+    <script src="js/loading.js"></script>
+
+</body>
+
+</html>

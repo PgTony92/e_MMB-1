@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商场导航</title>
+    <!-- 引入mui的css文件 -->
+    <link rel="stylesheet" href="lib/mui/css/mui.min.css">
+    <!-- 引入字体图标文件 -->
+    <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.min.css">
+    <!-- 引入自己的less文件 -->
+    <link rel="stylesheet/less" href="less/sitenav.less">
+    <!-- 引入less编译文件 -->
+    <script src="lib/less/less.js"></script>
+    <!-- 引入rem文件 -->
+    <script src="js/rem.js"></script>
+
+
+</head>
+
+<body>
+    <!-- 头部区域 -->
+    <header id="header">
+        <div class="left">
+            <a href="#" title="" class="left fa fa-arrow-left">
+            </a>
+        </div>
+        <!-- <div class="icon-back"><a href="index.html">&lt;</a> -->
+        <div class="header-text"><span>商城导航</span></div>
+
+        <div class="right">
+            <a href="#" class="download">
+                <img src="images/header_app.png" alt="手机app下载">
+            </a>
+        </div>
+    </header>
+
+    <!-- 主体区域 -->
+    <main id="main">
+        <!-- <a href="#">
+            <img src="http://misc.manmanbuy.com/images/hzweb/360.png" alt=""><span>京东商城</span>
+        </a>
+        <a href="#">
+            <img src="http://misc.manmanbuy.com/images/hzweb/360.png" alt=""><span>商城</span>
+        </a>
+        <a href="#">
+            <img src="http://misc.manmanbuy.com/images/hzweb/360.png" alt=""><span>京东商城哈</span>
+        </a> -->
+    </main>
+
+    <!-- 尾部导航栏 -->
+    <section id="footerbar">
+        <div class="content">
+            <a href="#">首页</a>><a href="#">商城导航</a>
+        </div>
+    </section>
+
+    <!-- 尾部区域 -->
+    <footer id="footer">
+        <div class="foot_top"><a href="login.html">登录</a> <a href="register.html">注册</a> <a href="##" style="width: 40%; border: 0;"
+                id="rtt"><i class="fa fa-arrow-up"></i>返回顶部</a></div>
+        <div class="footer-proud">
+            <p><a href="##" style="color: #ff4e49">手机APP下载</a> <a href="index.htm" tppabs="##" style="color:#bebebe;">慢慢买手机版
+                    -- 掌上比价平台</a></p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+
+    <!-- 创建模板 -->
+    <script id="linkTpl" type="text/html">
+        {{each result value}}
+        <a href="{{value.navHref}}">
+            <img src="{{value.navImg}}" alt=""><span>{{value.navTitle}}</span>
+        </a>
+        {{/each}}
+    </script>
+
+
+    <!-- 引入mui的js文件 -->
+    <script src="lib/mui/js/mui.min.js"></script>
+    <!-- 引入移动端的zepto文件 -->
+    <script src="lib/zepto/zepto.min.js"></script>
+    <!-- 引入公共的js文件 -->
+    <script src="js/base.js"></script>
+    <!-- 引入模板文件 -->
+    <script src="lib/artTemplate/template-web.js"></script>
+    <!-- 引入自己的js文件 -->
+    <script src="js/sitenav.js"></script>
+
+
+</body>
+
+</html>

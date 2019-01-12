@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>比价搜索二级页面</title>
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/productlist.css">
+    <style>
+        .su_container .evaluate_info img {
+            height: 18px;
+            width: 18px;
+            float: right;
+        }
+
+        .su_container .evaluate_info li .evaluate_list_content {
+            background-color: #a1a1a1;
+        }
+
+        .su_container .evaluate_top {
+            border-top: 1px solid #ccc;
+        }
+
+        .positionFixed {
+            transform: translateY(-90px);
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header" class="header">
+        <div class="logo"><a href="index.html" title="慢慢买"><img src="images/header_logo.png" alt=""></a></div>
+        <div class="appdown"><a href="##"><img src="images/header_app.png" alt="手机app下载"></a></div>
+    </header>
+    <div id="productList">
+        <div class="su_nav">
+            <div data-title-id="1">
+                <a href="index.html">首页 &gt;</a>
+                <a href="category.html">全部分类 &gt;</a>
+                <a href="category.html">{{categoryTitle}}</a>
+                <a href="">筛选</a>
+            </div>
+        </div>
+        <div class="su_container">
+            <ul class="infor" v-for="(pl,index) in productList" :key="index">
+                <li>
+                    <a href="javascript:;">
+                        <div class="su_pic" v-html="pl.productImg"></div>
+                        <div class="su_shop_content">
+                            <p>{{pl.productName}}</p>
+                            <p>{{pl.productPrice}} <span>
+                                    <img src="images/star.svg" alt="">
+                                    <img src="images/star.svg" alt="">
+                                    <img src="images/star.svg" alt="">
+                                    <img src="images/star.svg" alt="">
+                                    <img src="images/star.svg" alt="">
+                                </span>
+                            </p>
+
+                            <div class="other">
+                                <span>{{pl.productQuote}}</span>
+                                <span @click.prevent='showComments(pl.productId,$event)'>{{pl.productCom}}</span>
+                            </div>
+
+
+
+                        </div>
+                    </a>
+                    <div v-show="pl.productId == showCommentsById" class="evaluate">
+                        <div class="evaluate_top">网友评价</div>
+                        <div class="evaluate_list">
+                            <ul class="evaluate_info">
+                                <li v-for="(comment,index) in productCom" :key="index">
+                                    <div class="data">
+                                        <div class="userName"> {{comment.comName}} </div>
+                                        <div class="date"> {{comment.comTime}} </div>
+                                    </div>
+                                    <div class="from">
+                                        <span>
+                                            <img src="images/star.svg" alt="">
+                                            <img src="images/star.svg" alt="">
+                                            <img src="images/star.svg" alt="">
+                                            <img src="images/star.svg" alt="">
+                                            <img src="images/star.svg" alt="">
+                                        </span> {{comment.comFrom}} </div>
+                                    <div class="evaluate_list_content">
+                                        {{comment.comContent}}
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                </li>
+            </ul>
+
+        </div>
+        <div class="page">
+            <div class="buttonBefore"><a href="#">上一页</a></div>
+            <div class="buttonafter"><a href="#">下一页</a></div>
+        </div>
+        <section id="recommen" class="list-title">
+            <div class="list-title-content"><span>品牌排行</span> </div>
+        </section>
+    </div>
+    <footer id="ctl00_foot">
+        <div class="foot_top"><a href="login.html">登录</a> <a href="register.html">注册</a> <a href="##" style="width: 40%; border: 0;"
+                id="rtt">返回顶部</a></div>
+        <div class="footer">
+            <p><a href="##" style="color: #ff4e49">手机APP下载</a> <a href="index.htm" tppabs="##" style="color:#bebebe;">慢慢买手机版
+                    -- 掌上比价平台</a></p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+    <!-- <div id="mask"></div> -->
+
+</body>
+<script src="lib/axios.js"></script>
+<script src="lib/vue.js"></script>
+<script src="js/public.js"></script>
+<script src="js/loading.js"></script>
+<script>
+    let productList = new Vue({
+        el: '#productList',
+        data: {
+            categoryid: 0,
+            categoryTitle: '',
+            pageid: 0,
+            productList: [],
+            productCom: [],
+            showCommentsById: -1,
+        },
+        created() {
+            this.categoryid = MMB.getUrlParam('categoryid');
+            this.pageid = MMB.getUrlParam('pageid');
+            let pl = new MMB();
+            pl.getProductList(this.categoryid, this.pageid).then(res => {
+                this.productList = res.result;
+                return this.productList.length;
+            }).then(res => {
+                if (res > 0) {
+                    this.productList.forEach(el =>{
+                        console.log(el.productId)
+                    } );
+                }
+            });
+            pl.getCategoryById(this.categoryid).then(res => this.categoryTitle = res.result[0].category);
+        },
+        methods: {
+            // [评论]单击事件
+            showComments: function (id,e) {
+                if(this.showCommentsById == id){
+                    new MMB().getProductCom(id).then(res=>this.productCom = res.result);
+                    this.showCommentsById = -1;
+                }else{
+                    new MMB().getProductCom(id).then(res=>this.productCom = res.result);
+                    this.showCommentsById = id;
+                }
+
+                
+            }
+        }
+
+    })
+</script>
+
+</html>
